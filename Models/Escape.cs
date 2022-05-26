@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+
+public static class Escape {
+    private static string[] _incognitasSalas;
+    public static string[] _nombreViews; // -, Habitacion1, Habitacion2 ..., Victoria
+    public static int _estadoJuego;
+
+    public static string[] nombreViews
+    {
+        get {return _nombreViews;}
+    }
+
+    public static int EstadoJuego
+    {
+        get {return _estadoJuego;}
+    }
+
+    private static void InicialiazarJuego()
+    {
+        _incognitasSalas = new string[5];
+        //La sala [0] es ignorada ya que indexamos desde el 1
+        _incognitasSalas[1] = "...";
+        _incognitasSalas[2] = "...";
+        _incognitasSalas[3] = "...";
+        _incognitasSalas[4] = "...";
+
+        _nombreViews = new string[6];
+        //La sala [0] es ignorada ya que indexamos desde el 1
+        _nombreViews[1] = "Habitacion1";
+        _nombreViews[2] = "Habitacion2";
+        _nombreViews[3] = "Habitacion3";
+        _nombreViews[4] = "Habitacion4";
+        _nombreViews[5] = "Victoria"; //Self explanatory
+    }
+
+    public static bool resolverSala(int sala, string incognita)
+    {
+        if(sala != _estadoJuego) return false;
+        return _incognitasSalas[sala] == incognita;
+    }
+}
