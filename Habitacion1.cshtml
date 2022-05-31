@@ -1,0 +1,17 @@
+<h1>
+    Sala N°1:
+</h1>
+<iframe width="795" height="690" frameborder="0" src="https://es.educaplay.com/juego/4453270-cars.html"></iframe>
+<p>Ingrese la ultima letra de cada marca.</p>
+<form method = "post" action = '@Url.Action("Habitacion", "Home", new{sala=1})'>
+    <input type = "text" name = "clave" placeholder="Ingrese su respuesta"/>
+    <input type = "submit" value="Enviar!">
+    <div class="pista" style="display:none;"> kek </div>
+    <input type = "button" value = "Pista" onclick = "mostrar()">
+    <script>
+        function mostrar()
+        {
+            ("$pista").css("display", "block");
+        }
+    </script>    
+</form>
