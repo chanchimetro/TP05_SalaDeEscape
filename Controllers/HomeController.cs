@@ -30,6 +30,7 @@ namespace TP05_SalaDeEscape.Controllers
 
         public IActionResult Comenzar() //Comenzar la proxima habitacion
         {
+            if(Escape.EstadoJuego == 0) Escape.InicialiazarJuego();
             return View(Escape.nombreViews[Escape.EstadoJuego+1]);
         }
 
