@@ -6,12 +6,12 @@
 <form method = "post" action = '@Url.Action("Habitacion", "Home", new{sala=1})'>
     <input type = "text" name = "clave" placeholder="Ingrese su respuesta"/>
     <input type = "submit" value="Enviar!">
-    <div class="pista" style="display:none;"> kek </div>
-    <input type = "button" value = "Pista" onclick = "mostrar()">
+    <div class="pista" class="pista"> kek </div>
+    <input type = "button" value = "Pista" id="pista" onclick = "mostrar()">
     <script>
         function mostrar()
         {
-            ("$pista").css("display", "block");
+            $(".pista").css("display", "block");
         }
-    </script>    
+    </script>
 </form>
