@@ -16,7 +16,7 @@ public static class Escape {
         get {return _estadoJuego;}
     }
 
-    private static void InicialiazarJuego()
+    public static void InicialiazarJuego()
     {
         _incognitasSalas = new string[5];
         //La sala [0] es ignorada ya que indexamos desde el 1
@@ -27,11 +27,11 @@ public static class Escape {
 
         _nombreViews = new string[6];
         //La sala [0] es ignorada ya que indexamos desde el 1
-        _nombreViews[1] = "Habitacion1";
-        _nombreViews[2] = "Habitacion2";
-        _nombreViews[3] = "Habitacion3";
-        _nombreViews[4] = "Habitacion4";
-        _nombreViews[5] = "Victoria"; //Self explanatory
+        _nombreViews[1] = "../Habitaciones/Habitacion1";
+        _nombreViews[2] = "../Habitaciones/Habitacion2";
+        _nombreViews[3] = "../Habitaciones/Habitacion3";
+        _nombreViews[4] = "../Habitaciones/Habitacion4";
+        _nombreViews[5] = "../Habitaciones/Victoria"; //Self explanatory
     }
 
     public static bool resolverSala(int sala, string incognita)
