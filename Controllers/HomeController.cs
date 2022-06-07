@@ -28,17 +28,23 @@ namespace TP05_SalaDeEscape.Controllers
             return View();
         }
 
-        public IActionResult Comenzar() //Comenzar la proxima habitacion
+        public IActionResult Comenzar()
         {
-            if(Escape.EstadoJuego == 0) Escape.InicialiazarJuego();
-            return View(Escape.nombreViews[Escape.EstadoJuego+1]);
+            Escape.InicialiazarJuego();
+            return View(Escape.nombreViews[Escape.EstadoJuego]);
         }
 
         [HttpPost]
         public IActionResult Habitacion(int sala, string clave)
         {
             if(sala != Escape.EstadoJuego) return View(Escape.nombreViews[Escape.EstadoJuego]);
-            if(Escape.resolverSala(sala, clave)) return Comenzar();
+            if(Escape.resolverSala(sala, clave))
+            {
+                Escape.EstadoJuego += 1;
+                return View(Escape.nombreViews[Escape.EstadoJuego]);
+            }
+            Escape.VidasRestantes -= 1;
+            if(Escape.VidasRestantes == 0) return View(Escape.nombreViews[6]);
             ViewBag.Error = "La respuesta es incorrecta!";
             return View(Escape.nombreViews[Escape.EstadoJuego]); //Tambien es posible utilizar Habitacion[sala]
         }
