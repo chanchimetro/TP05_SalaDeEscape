@@ -30,7 +30,7 @@ namespace TP05_SalaDeEscape.Controllers
 
         public IActionResult Comenzar()
         {
-            Escape.InicialiazarJuego();
+            if(Escape.EstadoJuego == 0) Escape.InicialiazarJuego();
             return View(Escape.nombreViews[Escape.EstadoJuego]);
         }
 
