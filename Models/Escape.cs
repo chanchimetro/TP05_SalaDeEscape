@@ -28,10 +28,10 @@ public static class Escape {
     {
         _incognitasSalas = new string[5];
         //La sala [0] es ignorada ya que indexamos desde el 1
-        _incognitasSalas[1] = "admin1";
-        _incognitasSalas[2] = "admin2";
-        _incognitasSalas[3] = "admin3";
-        _incognitasSalas[4] = "admin4";
+        _incognitasSalas[1] = "GIRINIASAP";
+        _incognitasSalas[2] = "IWCUIYARSINEEAAN";
+        _incognitasSalas[3] = "162P9";
+        _incognitasSalas[4] = "NYY";
 
         _nombreViews = new string[7];
         //La sala [0] es ignorada ya que indexamos desde el 1

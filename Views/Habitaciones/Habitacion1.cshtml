@@ -5,12 +5,12 @@
 <p>Ingrese la ultima letra de cada marca.</p>
 <form method = "post" action = '@Url.Action("Habitacion", "Home", new{sala=1})'>
     <input type = "text" name = "clave" placeholder="Ingrese su respuesta"/>
-    <input type = "submit" value="Enviar!">
+    <input type = "submit" value="Enviar!" class="btn btn-primary">
     <div class="alert alert-info alert-dismissible pista">
-        HOLAA
+        Mira mejor
         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
     </div>
-    <input type = "button" value = "Pista" id="pista" onclick = "mostrar()">
+    <input type = "button" value = "Pista" id="pista" class="btn btn-secondary" onclick = "mostrar()">
     <script>
         function mostrar()
         {

@@ -1,4 +1,32 @@
-<h1>
-    Sala N°4:
-</h1>
-<p>¿?</p>
+<h1>    Sala N°4: </h1>
+
+<form method="POST" action = '@Url.Action("Habitacion", "Home", new{sala=4})' onsubmit='clave.value = p1.value + p2.value + p3.value'>
+    <p> Michael Schumaher tiene 8 copas del mundo </p>
+    <input type="radio" name="p1" value="Y"/> <label for="p1"> Si </label> <br/>
+    <input type="radio" name="p1" value="N"/> <label for="p1"> No </label> <br/>
+
+    <p> El Nissan Skyline GTR R34 tiene un motor RB26 </p>
+    <input type="radio" name="p2" value="Y"/> <label for="p2"> Si </label> <br/>
+    <input type="radio" name="p2" value="N"/> <label for="p2"> No </label> <br/>
+
+    <p> La marca Lada es una marca rusa </p>
+    <input type="radio" name="p3" value="Y"/> <label for="p3"> Si </label> <br/>
+    <input type="radio" name="p3" value="N"/> <label for="p3"> No </label> <br/>
+
+    <input type="hidden" name="clave"/>
+    <input type="submit" value="Enviar!" class="btn btn-primary"/>
+    <div class="alert alert-info alert-dismissible pista">
+        1- Es el quinto (o cuarto?) numero primo.<br/>
+        2- Falsamento falso :^)<br/>
+        3- No se, vos que crees? :^)
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    </div>
+    <input type = "button" value = "Pista" id="pista" class="btn btn-secondary" onclick = "mostrar()">
+    <script>
+        function mostrar()
+        {
+            $(".pista").css("display", "block");
+        }
+    </script>
+
+</form>
